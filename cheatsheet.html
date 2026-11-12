@@ -1,0 +1,67 @@
+<!-- VOX cheat sheet: an HTML fragment the emulator shows right of the device (tools/build.sh copies it to
+     runtime/web/firmware/vox.cheat.html). Styles: .cheat in runtime/web/css/vibe.css. Keep it short – it sits beside
+     the device while you play. -->
+<h2>VOX <small>1.4 · voice into IN 1</small></h2>
+<p class="dim">Kopfhörer auf · ENTER = Mikro an · Pad antippen = Effekt</p>
+
+<h3>Farbtasten = Bereiche</h3>
+<table>
+  <tr><td><span class="k c" style="background:#6EE7A8">INPUT</span></td><td>MODE · GAIN · GATE · COMP · DE-ESS</td></tr>
+  <tr><td><span class="k c" style="background:#3FD0C9">EQ</span></td><td>Low Cut (24 dB/Okt.) · Low 150 Hz · Mid (SHIFT: Frequenz 200 Hz–8 kHz, Q) · High 8 kHz</td></tr>
+  <tr><td><span class="k c" style="background:#B38CFF">VOX</span></td><td><b>TUNE</b>: KEY · SCALE · AMOUNT (100 % = ganz glatt) · <b>Vocoder</b>: Stimme durch Synth, Akkord auf den Tasten · <b>Harmony</b>: bis 3 Zusatzstimmen</td></tr>
+  <tr><td><span class="k c" style="background:#FF5A4D">PITCH</span></td><td>PITCH · FORMANT · DOUBLER · COLOR</td></tr>
+  <tr><td><span class="k c" style="background:#3FA9F5">FX</span></td><td><b>3 Unterseiten</b> (Chips, <b>K5 nochmal</b> = nächste): <b>DELAY</b> = Menge · Zeit · Feedback · <b>Typ</b> (Digital · Analog · Tape · Ping-Pong) · <b>REVERB</b> = Menge · Größe · Pre-Delay (0–100 ms) · <b>Typ</b> (Hall · Room · Plate · Spring) · <b>MOD</b> = Menge (0 = aus) · Rate · Tiefe · <b>Typ</b> (Chorus · Flanger · Phaser) – MOD liegt auf der Stimme vor Delay und Hall</td></tr>
+  <tr><td><span class="k c" style="background:#FF8A3D">LOOP</span></td><td><b>4 Loop-Spuren nebeneinander</b> (wie eine Loop-Station). Hier sind die Pads der Looper, keine Presets: <b>Pad 1–4</b> (obere Reihe) und <b>Encoder-Taste 1–4</b> (VIBE Box) = <b>ein Knopf pro Spur, wie beim Ditto</b>: tippen = leer → REC · REC → läuft · läuft → Overdub · Overdub → läuft · gestoppt → läuft im Takt · <b>2× tippen = STOP</b> · <b>1,5 s halten = Undo/Redo</b> (läuft – ein eben begonnener Overdub wird dabei verworfen) bzw. <b>löschen</b> (gestoppt) · Overdub startet <b>beim Drücken</b> · 2× tippen und halten = STOP und löschen. <b>Pad 5–8</b> (untere Reihe) = STOP am Loop-Ende (nochmal = sofort) · halten = löschen. Der erste Loop gibt die Länge vor (LÄNGE: frei oder Takte), weitere starten am Loop-Anfang (WAIT) und enden auf einem Vielfachen. Je Spur drei <b>senkrechte Fader</b>: VOL · <b>DLY</b> (Send 1 ins Delay) · <b>REV</b> (Send 2 in den Hall/Reverb) – Encoder 1–4 = Spur 1–4, die Reihe steht als <b>Chip</b> oben (VOL · DLY · REV · LENGTH): <b>K6 nochmal</b> = nächste Reihe. LENGTH-Reihe: Länge · Overdub · Loops · <b>REC FX</b> – ON (Standard) = der Looper nimmt die Stimme <b>mit</b> Delay, Hall und MOD auf, so wie man sie hört; OFF = davor (die Effekte kommen dann nur über die Spur-Fader DLY/REV dazu). <b>Spur wählen</b> ohne auszulösen: <b>SHIFT antippen, dann Pad</b> (binnen 1,5 s, wie beim DJ – am MPK senden die Pads nichts, solange SHIFT gehalten wird) oder am VIBE SHIFT halten + Pad · SHIFT halten ändert hier nichts am Bild · PLAY / REC / STOP / Pedal / SHIFT+F6 wirken auf die gewählte Spur · SHIFT+STOP = alle am Loop-Ende stopp (nochmal = sofort) · SHIFT+REC = alle löschen · F5 SAVE WAV = gewählte Spur</td></tr>
+</table>
+<p class="dim">Die vier Encoder unter dem Display regeln die Werte des Bereichs.</p>
+<p><b>Unterseiten:</b> Hat ein Bereich mehrere, stehen sie als <b>Chips</b> in der zweiten Kopfzeile – INPUT: LEVELS · SETUP (Eingang, Kompressor-Art, S-Frequenz) · EQ: BANDS · MID (Frequenz, Q) · VOX: OFF · TUNE · VOCODER · HARMONY · LOOP: VOL · DLY · REV · LENGTH. <b>Dieselbe Farbtaste nochmal</b> = nächste Unterseite (SHIFT halten zeigt bei INPUT und EQ weiter die zweite).</p>
+<p><b>Maus im Plugin-Fenster und im Browser</b> (nicht am VIBE): Klick auf <b>◀ ▶</b> in der Kopfzeile = voriger/nächster Bereich, Chips = Unterseite, F-Tasten unten, Preset-Felder, die Spurtasten im Looper, STOP-Felder, Wellenform = Spur wählen, Fader-Klick = diese Reihe; auf einer Encoder-Spalte ziehen = der Encoder.</p>
+<p><b>SHIFT halten + Drehrad (DATA)</b>: ein Rahmen läuft über <b>jeden Regler der Seite einzeln</b> (wie DECKS im DJ), danach F-Tasten und Kopfzeile · <b>Rad drücken</b> = Wert ändern (auch ohne SHIFT weiter drehen), nochmal drücken = fertig · der Rahmen bleibt nach dem Loslassen, geht mit RETURN oder nach 6 s ohne Berührung · danach wählt das Rad wieder das Programm.</p>
+
+<h3>F-Tasten</h3>
+<table>
+  <tr><td><span class="k">F1</span></td><td><b>MIXER</b>: Dry/Wet, Delay, Hall, Loop · <span class="dim">SHIFT: DRY</span></td></tr>
+  <tr><td><span class="k">F2</span></td><td><b>PRESETS</b>: alle 16 Pads im Überblick</td></tr>
+  <tr><td><span class="k">F3 F4</span></td><td>Preset zurück / vor</td></tr>
+  <tr><td><span class="k">F5</span></td><td><b>SAVE</b> aufs Pad · halten + Pad = dorthin · <span class="dim">SHIFT: FACTORY</span> · auf LOOP: <b>SAVE WAV</b> = Loop speichern</td></tr>
+  <tr><td><span class="k">F6</span></td><td><b>GLOBAL</b>: TEMPO, OUTPUT, PADS · <span class="dim">SHIFT: Loop-Undo</span></td></tr>
+</table>
+
+<h3>Pads = Punch-in-Presets</h3>
+<div class="pads">
+  <div style="--c:#6EE7A8">NATURAL<small>1</small></div>
+  <div style="--c:#F5C93F">RADIO<small>2</small></div>
+  <div style="--c:#F5C93F">PHONE<small>3</small></div>
+  <div style="--c:#FF8A3D">MEGAPHONE<small>4</small></div>
+  <div style="--c:#3FD0C9">T-PAIN<small>5</small></div>
+  <div style="--c:#3FD0C9">ROBOT<small>6</small></div>
+  <div style="--c:#B38CFF">DAFT PUNK<small>7</small></div>
+  <div style="--c:#B38CFF">KRAFTWERK<small>8</small></div>
+  <div style="--c:#5EA8FF">CHOIR<small>Q</small></div>
+  <div style="--c:#5EA8FF">THIRD<small>W</small></div>
+  <div style="--c:#FF5A4D">MONSTER<small>E</small></div>
+  <div style="--c:#FF5A4D">CHIPMUNK<small>R</small></div>
+  <div style="--c:#FF5A4D">ALIEN<small>T</small></div>
+  <div style="--c:#E6EAF2">CATHEDRAL<small>Y</small></div>
+  <div style="--c:#E6EAF2">ECHO WALL<small>U</small></div>
+  <div style="--c:#F5C93F">LO-FI<small>I</small></div>
+</div>
+<p class="dim">Tippen = bleibt · halten = nur solange (Punch-in) · klein = Computertaste</p>
+
+<h3>Looper</h3>
+<table>
+  <tr><td><span class="k">PLAY</span></td><td>Aufnahme → Loop läuft → Overdub → läuft · <kbd>Leer</kbd></td></tr>
+  <tr><td><span class="k">REC</span></td><td>Overdub an/aus · <kbd>O</kbd></td></tr>
+  <tr><td><span class="k">STOP</span></td><td>Stopp · 2× schnell = löschen · <kbd>⌫</kbd></td></tr>
+  <tr><td><span class="k">PEDAL</span></td><td>wie PLAY · <kbd>P</kbd></td></tr>
+</table>
+
+<h3>FOCUS · ein Regler, ein Knopf</h3>
+<p><b>ENTER</b> (oder das DATA-Rad) <b>0,6 s halten</b>: ein oranger Rahmen läuft mit <b>DATA</b> über Seite, DRY/WET, Tempo, die vier Werte, F1–F6 und auf PRESETS jedes Programm · <b>ENTER</b> bedient (ein Wert: DATA ändert, ENTER beendet) · nochmal halten oder ↩: aus. Kurzes ENTER bleibt wie es war.</p>
+
+<h3>Sonst</h3>
+<table>
+  <tr><td><span class="k">ENTER</span></td><td>HOLD: Vocoder-Akkord bleibt liegen</td></tr>
+  <tr><td><span class="k">TASTEN</span></td><td>Akkord für Vocoder / Skala + Stimmen TASTEN · <kbd>Y</kbd><kbd>X</kbd><kbd>C</kbd>…</td></tr>
+  <tr><td><span class="k">A B DATA</span></td><td>Tempo · <b>Dry/Wet</b> (immer, auf jeder Seite) · <b>Programm</b> (Ausgang: GLOBAL, Regler 2)</td></tr>
+</table>
